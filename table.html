@@ -4,8 +4,8 @@
     <title>ASCII Table </title>
     <style>
       table{
-	text-align: right
-	}
+        text-align: right
+      }
     </style>
 
     <script>
@@ -22,21 +22,28 @@
       }*/
       document.write("<table>")
       for( i=0; i<16; i++){
-	document.write("<tr><td>" + i.toString().padStart(3) + " " + i.toString(16).padStart(2,'0') + " " + i.toString(8).padStart(3,'0') + String.fromCharCode(i) + "</td>" 
-	+  "<td>" + (i+16).toString() + " " + (i+16).toString(16).padStart(2,'0') + " " + (i+16).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+16) + "</td>" 
-	+  "<td>" + (i+32).toString() + " " + (i+32).toString(16).padStart(2,'0') + " " + (i+32).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+32) + "</td>" 
-	+  "<td>" + (i+48).toString() + " " + (i+48).toString(16).padStart(2,'0') + " " + (i+48).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+48) + "</td>" 
-	+  "<td>" + (i+64).toString() + " " + (i+64).toString(16).padStart(2,'0') + " " + (i+64).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+64) + "</td>" 
-	+  "<td>" + (i+80).toString() + " " + (i+80).toString(16).padStart(2,'0') + " " + (i+80).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+80) + "</td>" 
-	+  "<td>" + (i+96).toString() + " " + (i+96).toString(16).padStart(2,'0') + " " + (i+96).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+96) + "</td>" 
-	+  "<td>" + (i+112).toString() + " " + (i+112).toString(16).padStart(2,'0') + " " + (i+112).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+112) + "</td>" 
-	+ "</tr>")
+        document.write("<tr><td>" + i.toString().padStart(3) + " " + i.toString(16).padStart(2,'0') + " " + i.toString(8).padStart(3,'0') + String.fromCharCode(i) + "</td>" 
+        +  "<td>" + (i+16).toString() + " " + (i+16).toString(16).padStart(2,'0') + " " + (i+16).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+16) + "</td>" 
+        +  "<td>" + (i+32).toString() + " " + (i+32).toString(16).padStart(2,'0') + " " + (i+32).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+32) + "</td>" 
+        +  "<td>" + (i+48).toString() + " " + (i+48).toString(16).padStart(2,'0') + " " + (i+48).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+48) + "</td>" 
+        +  "<td>" + (i+64).toString() + " " + (i+64).toString(16).padStart(2,'0') + " " + (i+64).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+64) + "</td>" 
+        +  "<td>" + (i+80).toString() + " " + (i+80).toString(16).padStart(2,'0') + " " + (i+80).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+80) + "</td>" 
+        +  "<td>" + (i+96).toString() + " " + (i+96).toString(16).padStart(2,'0') + " " + (i+96).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+96) + "</td>" 
+        +  "<td>" + (i+112).toString() + " " + (i+112).toString(16).padStart(2,'0') + " " + (i+112).toString(8).padStart(3,'0') + " " + String.fromCharCode(i+112) + "</td>" 
+        + "</tr>")
       }
       document.write("</table>")
 
     </script>
   </head>
-  <body >
+  <body>
+    <input type="radio" id="Hex" name="encoding">Hex</input>
+    <input type="radio" id="Base64" name="encoding">Base64</input>
+    <input type="radio" id="Binary" name="encoding">Binary</input>
+    <input type="radio" id="ROT" name="encoding">ROT</input>
+    <br />
+    <input type="radio" id="encode" name="decode">Encode</input>
+    <input type="radio" id="decode" name="decode">Decode</input>
 
   </body>
 
