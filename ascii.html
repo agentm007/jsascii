@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>ASCII Table</title>
+    <h1>ASCII Table</h1>
+    <style>
+    table{
+    text-align: right;
+  }
+  th, td{
+    padding: 2px;
+  }
+    </style>
+
+    <script>
+      document.writeln("<table>")
+  document.writeln("<tr><th>Dec</th><th>Hex</th><th>Oct</th><th>Bin</th><th>Char</th><th>Dec</th><th>Hex</th><th>Oct</th><th>Bin</th><th>Char</th>" +
+  "<th>Dec</th><th>Hex</th><th>Oct</th><th>Bin</th><th>Char</th><th>Dec</th><th>Hex</th><th>Oct</th><th>Bin</th><th>Char</th>" +
+  "<th>Dec</th><th>Hex</th><th>Oct</th><th>Bin</th><th>Char</th><th>Dec</th><th>Hex</th><th>Oct</th><th>Bin</th><th>Char</th>" +
+  "<th>Dec</th><th>Hex</th><th>Oct</th><th>Bin</th><th>Char</th></tr>")
+  
+  var characters = [ "Null",  "SOH (start of heading)",  "STX (start of text)",   "ETX (end of text)",  "EOT (end of transmission)",  "ENQ (enquiry)",  "ACK (acknowledge)",  "BEL (bell)", 
+  "BS (backspace)", "TAB (horizontal tab)", "LF (NL line feed, new line)", "VT (vertical tab)", "FF (NP for feed, new page)", "CR (carriage return)", "SO (shift out)", "SI (shift in)", "DEL (data link escape)",
+  "DC1 (device control 1)", "DC2 (device control 2)", "DC3 (device control 3)", "DC4 (device control 4)", "NAK (negative acknowledge)", "SYN (synchronous idle)", "ETB (end of trans. block)", "CAN (cancel)",
+  "EM (end of medium)", "SUB (substitute)", "ESC (escape)", "FS (file separator)", "GS (group separator)", "RS (record separator)", "US (record separator)", "Space"]
+  
+  for(i=33; i<127; i++){
+    characters.push(String.fromCharCode(i));
+  }
+  
+  characters.push("DEL");
+  
+  for( i=0; i<16; i++){
+  
+    c1dec = i
+    c1hex = i.toString(16).padStart(2,'0');
+    c1oct = i.toString(8).padStart(3,'0');
+    c1bin = i.toString(2).padStart(8,'0');
+    c1chr = characters[i];
+    
+    c2dec = i + 16
+    c2hex = (i+16).toString(16).padStart(2,'0');
+    c2oct = (i+16).toString(8).padStart(3,'0');
+    c2bin = (i+16).toString(2).padStart(8,'0');
+    c2chr = characters[(i+16)];
+    
+    c3dec = i + 32
+    c3hex = (i+32).toString(16).padStart(2,'0');
+    c3oct = (i+32).toString(8).padStart(3,'0');
+    c3bin = (i+32).toString(2).padStart(8,'0');
+    c3chr = characters[(i+32)];
+    
+    c4dec = i + 64
+    c4hex = (i+64).toString(16).padStart(2,'0');
+    c4oct = (i+64).toString(8).padStart(3,'0');
+    c4bin = (i+64).toString(2).padStart(8,'0');
+    c4chr = characters[(i+64)];
+    
+    c5dec = i + 80
+    c5hex = (i+80).toString(16).padStart(2,'0');
+    c5oct = (i+80).toString(8).padStart(3,'0');
+    c5bin = (i+80).toString(2).padStart(8,'0');
+    c5chr = characters[(i+80)];
+    
+    c6dec = i + 96
+    c6hex = (i+96).toString(16).padStart(2,'0');
+    c6oct = (i+96).toString(8).padStart(3,'0');
+    c6bin = (i+96).toString(2).padStart(8,'0');
+    c6chr = characters[(i+96)];
+    
+    c7dec = i + 112
+    c7hex = (i+112).toString(16).padStart(2,'0');
+    c7oct = (i+112).toString(8).padStart(3,'0');
+    c7bin = (i+112).toString(2).padStart(8,'0');
+    c7chr = characters[(i+112)];
+    
+    document.writeln("<tr><td>" + c1dec + "</td><td>" + c1hex + "</td><td>" + c1oct + "</td><td>" + c1bin  + "</td><td>" + c1chr + "</td>" +
+    "<td>" + c2dec + "</td><td>" + c2hex + "</td><td>" + c2oct + "</td><td>" + c2bin  + "</td><td>" + c2chr + "</td>" +
+    "<td>" + c3dec + "</td><td>" + c3hex + "</td><td>" + c3oct + "</td><td>" + c3bin  + "</td><td>" + c3chr + "</td>" +
+    "<td>" + c4dec + "</td><td>" + c4hex + "</td><td>" + c4oct + "</td><td>" + c4bin  + "</td><td>" + c4chr + "</td>" +
+    "<td>" + c5dec + "</td><td>" + c5hex + "</td><td>" + c5oct + "</td><td>" + c5bin  + "</td><td>" + c5chr + "</td>" +
+    "<td>" + c6dec + "</td><td>" + c6hex + "</td><td>" + c6oct + "</td><td>" + c6bin  + "</td><td>" + c6chr + "</td>" +
+    "<td>" + c7dec + "</td><td>" + c7hex + "</td><td>" + c7oct + "</td><td>" + c7bin  + "</td><td>" + c7chr + "</td>");
+  }
+  document.writeln("</table>")
+    </script>
+  </head>
+  <body >
+
+  </body>
+
+</html>
