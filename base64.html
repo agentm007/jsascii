@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Base64 Converter</title>
+    <script>
+    function convert(){
+      if(document.getElementById("base64").checked){
+        document.getElementById("output").value = btoa(document.getElementById("input").value);
+      }
+      else if(document.getElementById("ascii").checked){
+        document.getElementById("output").value = atob(document.getElementById("input").value);
+      }
+    }
+
+    </script>
+  </head>
+  </body>
+    <h1>Base64 Converter</h1>
+  
+    <textarea id="input" rows="4" cols="70"></textarea>
+    <br />
+    <br />
+  
+    <input type="radio" name="base64" id="base64" checked="checked" />To Base64
+    <input type="radio" name="base64" id="ascii" />To ASCII
+    <button type="button" onclick="convert()">Convert</button><br /><br />
+  
+    <textarea id="output" rows="4" cols="70"></textarea> 
+  
+  </body>
+<html>
