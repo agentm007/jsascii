@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>Hex Converter</title>
+    <script>
+    function hexToASCII(value){
+      var out = '';
+      value = value.toString();
+      for(i=0; i < hex.length; i+=2){
+        out += String.fromCharCode(parseInt(hex.substr(i,2),16));
+      }
+      return out;
+    }
+
+    function ASCIITohex(value){
+      var out = '';
+      for(i=0; i < value.length; i++){
+        out += Number(value.charCodeAt(n)).toString(16);
+      }
+      return out;
+    }
+
+    function convert(){
+      if(document.getElementById("hex").checked){
+       
+      }
+      else if(document.getElementById("ascii").checked){
+        
+      }
+    }
+
+    </script>
+  </head>
+  </body>
+    <h1>Hex Converter</h1>
+
+    <textarea id="input" rows="4" cols="70"></textarea>
+    <br />
+    <br />
+
+    <input type="radio" name="hex" id="hex" checked="checked" />To Hex
+    <input type="radio" name="hex" id="ascii" />To ASCII
+    <button type="button" onclick="convert()">Convert</button><br /><br />
+
+    <textarea id="output" rows="4" cols="70"></textarea>
+
+  </body>
+<html>
