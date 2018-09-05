@@ -7,8 +7,8 @@
     function hexToASCII(value){
       var out = '';
       value = value.toString();
-      for(i=0; i < hex.length; i+=2){
-        out += String.fromCharCode(parseInt(hex.substr(i,2),16));
+      for(i=0; i < value.length; i+=2){
+        out += String.fromCharCode(parseInt(value.substr(i,2),16));
       }
       return out;
     }
@@ -16,17 +16,17 @@
     function ASCIITohex(value){
       var out = '';
       for(i=0; i < value.length; i++){
-        out += Number(value.charCodeAt(n)).toString(16);
+        out += Number(value.charCodeAt(i)).toString(16);
       }
       return out;
     }
 
     function convert(){
       if(document.getElementById("hex").checked){
-       document.getElementById("output").value = hexToASCII(document.getElementById("input")
+       document.getElementById("output").value = ASCIITohex(document.getElementById("input").value);
       }
       else if(document.getElementById("ascii").checked){
-        document.getElementById("output").value =
+        document.getElementById("output").value = hexToASCII(document.getElementById("input").value);
       }
     }
 
