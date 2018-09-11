@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <title>ROT encoder</title>
+    <script>
+    function ROT(value, shift){
+      length = value.length;
+      shift = shift%26;
+      output ="";
+
+      for(i=0; i<length; i++){
+        letter = value.charCodeAt(i);
+        if((letter >= 65) && (letter <= 90)){
+          letter += shift;
+          if(letter > 90){
+            letter -= 26;
+          }
+          output += String.fromCharCode(letter);
+        }
+
+        else if((letter >= 97) && (letter <= 122)){
+          letter += shift;
+          if(letter > 122){
+            letter -= 26;
+          }
+          output += String.fromCharCode(letter);
+        }
+
+        else{
+          output += value.charAt(i);
+        }
+      }
+      return output;
+    }
+
+  function convert(){
+    document.getElementById("output").value = ROT(document.getElementById("input").value, document.getElementById("amount").value);
+  }
+
+    </script>
+  </head>
+  </body>
+    <h1>ROT encoder</h1>
+
+    <textarea id="input" rows="4" cols="70"></textarea>
+    <br />
+    <br />
+
+    <input type="number" id="amount" value="13">
+    <button type="button" onclick="convert()">Convert</button><br /><br />
+
+    <textarea id="output" rows="4" cols="70"></textarea>
+
+  </body>
+<html>
